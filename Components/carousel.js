@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View, FlatList, Dimensions } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";z
+import { SafeAreaView } from "react-native-safe-area-context";
 const Carousel = () => {
     const { width, height } = Dimensions.get('screen')
     const Info = ['Virat Kohli', 'Hitman', 'Bumrah', 'Siraj', 'Rahul', 'Pant', 'Dhoni', 'Jadeja', 'Shami']
