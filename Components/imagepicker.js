@@ -19,7 +19,7 @@ const imagepicker = () => {
             setMyImage(result.assets[0].uri)
         }
         else{
-            alert("Give Permission to Access Gallery Items");
+            alert("Give Permission");
         }
     }
 
