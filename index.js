@@ -19,5 +19,5 @@ import imageSharing from './Components/imagesharing';
 // registerRootComponent(animation);
 // registerRootComponent(bouningball);
 // registerRootComponent(imagepicker)
-registerRootComponent(imageSharing)
+// registerRootComponent(imageSharing)
 
