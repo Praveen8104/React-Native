@@ -10,23 +10,23 @@ import * as FileSystem from 'expo-file-system'
 const imageSharing = () => {
 
     const [MyImage, setMyImage] = useState(null)
-    const OpenGallery = async () => {
+    // const OpenGallery = async () => {
 
-        const { status } = await ImagePicker.getMediaLibraryPermissionsAsync();
-        if (status === "granted") {
-            const result = await ImagePicker.launchImageLibraryAsync({
-                allowsEditing: true,
-                mediaTypes: ImagePicker.MediaTypeOptions.All,
-                quality: 1
-            });
+    //     const { status } = await ImagePicker.getMediaLibraryPermissionsAsync();
+    //     if (status === "granted") {
+    //         const result = await ImagePicker.launchImageLibraryAsync({
+    //             allowsEditing: true,
+    //             mediaTypes: ImagePicker.MediaTypeOptions.All,
+    //             quality: 1
+    //         });
 
-            console.log(result)
-            setMyImage(result.assets[0].uri)
-        }
-        else {
-            alert("Give permission to open Media Items")
-        }
-    }
+    //         console.log(result)
+    //         setMyImage(result.assets[0].uri)
+    //     }
+    //     else {
+    //         alert("Give permission to open Media Items")
+    //     }
+    // }
     const ShareFile = async () => {
         const ImageURL = "https://adityauniversity.in/static/media/AU-logo.d4c9addb1494f8538d6a.jpg"
         const FileURL = `${FileSystem.cacheDirectory}` / Shared_image.png;
