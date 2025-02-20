@@ -7,7 +7,7 @@ import Carousel from './Components/carousel';
 import animation from './Components/animation';
 import bouningball from './Components/bouningball';
 import imagepicker from './Components/imagepicker';
-import imageSharing from './Components/imagesharing';
+import cameraaccess from './Components/cameraaccess';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
@@ -20,4 +20,4 @@ import imageSharing from './Components/imagesharing';
 // registerRootComponent(bouningball);
 // registerRootComponent(imagepicker)
 // registerRootComponent(imageSharing)
-
+registerRootComponent(cameraaccess);
