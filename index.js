@@ -20,5 +20,5 @@ import cameraaccess from './Components/cameraaccess';
 // registerRootComponent(animation);
 // registerRootComponent(bouningball);
 // registerRootComponent(imagepicker)
-registerRootComponent(imageSharing)
-// registerRootComponent(cameraaccess);
+// registerRootComponent(imageSharing)
+registerRootComponent(cameraaccess);
