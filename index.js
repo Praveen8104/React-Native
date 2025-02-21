@@ -9,6 +9,7 @@ import bouningball from './Components/bouningball';
 import imagepicker from './Components/imagepicker';
 import imageSharing from './Components/imagesharing';
 import cameraaccess from './Components/cameraaccess';
+import Fingerprint from './Components/Fingerprint';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
@@ -21,4 +22,5 @@ import cameraaccess from './Components/cameraaccess';
 // registerRootComponent(bouningball);
 // registerRootComponent(imagepicker)
 // registerRootComponent(imageSharing)
-registerRootComponent(cameraaccess);
+// registerRootComponent(cameraaccess);
+registerRootComponent(Fingerprint);
