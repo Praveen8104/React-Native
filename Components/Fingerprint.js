@@ -10,10 +10,13 @@ const Fingerprint = () => {
         const status = await LocalAuthentication.hasHardwareAsync();
         console.log(status);
         if (status) {
-            const result = await LocalAuthentication.authenticateAsync();
-            if (result.success) {
+            const result = await LocalAuthentication.isEnrolledAsync();
+            if (result) {
+                const auth = await LocalAuthentication.authenticateAsync({
+                    promptMessage: "Authenticate to Unlock",
+                });
                 alert("Authenticated");
-                console.log("Authenticated");
+                console.log("Authenticated", auth);
             } else {
                 alert("Authentication Failed");
                 console.log("Authentication Failed");
@@ -25,7 +28,7 @@ const Fingerprint = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
-                <Text style={{fontSize: 20}}>Fingerprint Scanner</Text>
+                <Text style={{ fontSize: 20 }}>Fingerprint Scanner</Text>
                 <Button
                     mode="contained"
                     style={styles.button}

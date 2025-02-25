@@ -10,6 +10,7 @@ import imagepicker from './Components/imagepicker';
 import imageSharing from './Components/imagesharing';
 import cameraaccess from './Components/cameraaccess';
 import Fingerprint from './Components/Fingerprint';
+import Microphone from './Components/microphone';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
@@ -24,3 +25,4 @@ import Fingerprint from './Components/Fingerprint';
 // registerRootComponent(imageSharing)
 // registerRootComponent(cameraaccess);
 registerRootComponent(Fingerprint);
+// registerRootComponent(Microphone);
