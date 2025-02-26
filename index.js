@@ -25,6 +25,6 @@ import Notification from './Components/Notifications';
 // registerRootComponent(imagepicker)
 // registerRootComponent(imageSharing)
 // registerRootComponent(cameraaccess);
-// registerRootComponent(Fingerprint);
+registerRootComponent(Fingerprint);
 // registerRootComponent(Microphone);
-registerRootComponent(Notification);
+// registerRootComponent(Notification);
