@@ -22,9 +22,9 @@ import Microphone from './Components/microphone';
 // registerRootComponent(Carousel);
 // registerRootComponent(animation);
 // registerRootComponent(bouningball);
-// registerRootComponent(imagepicker)
-// registerRootComponent(imageSharing)
-// registerRootComponent(cameraaccess);
-registerRootComponent(Fingerprint);
+// registerRootComponent(imagepicker);
+// registerRootComponent(imageSharing);
+registerRootComponent(cameraaccess);
+// registerRootComponent(Fingerprint);
 // registerRootComponent(Microphone);
 // registerRootComponent(Notification);

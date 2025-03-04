@@ -11,6 +11,7 @@ const Fingerprint = () => {
         console.log(status);
         if (status) {
             const result = await LocalAuthentication.isEnrolledAsync();
+            console.log(result)
             if (result) {
                 const auth = await LocalAuthentication.authenticateAsync({
                     promptMessage: "Authenticate to Unlock",
