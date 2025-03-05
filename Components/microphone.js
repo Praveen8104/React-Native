@@ -1,48 +1,39 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Button } from "react-native-paper";
-import * as Permissions from "expo-permissions";
+import React, { useState } from "react";
+import { Audio } from "expo-av";
 
 const Microphone = () => {
-    const getPermission = async () => {
-        const { status } = await Permissions.askAsync(Permissions.AUDIO_RECORDING);
+    const [MyAudio, setAudio] = useState(null);
+    const [AudioPath, setPath] = useState(null);
+
+    const startRecording = async () => {
+        const { status } = await Audio.requestPermissionsAsync();
         if (status === "granted") {
-            alert("Permission Granted");
-        } else {
-            alert("Permission Denied");
+            const { recording } = await Audio.Recording.createAsync();
+            setAudio(recording);
         }
-    };
+    }
 
-    return (
-        <View style={styles.container}>
-            <Text style={{ fontSize: 20 }}>Microphone</Text>
-            <Button
-                mode="contained"
-                style={styles.button}
-                onPress={getPermission}
-            >
-                <Text style={styles.text}>Get Permission</Text>
-            </Button>
-        </View>
-    );
-};
+    const stopRecording = async () => {
+        if (MyAudio) {
+            await MyAudio.stopAndUnloadAsync();
+            setPath(MyAudio._uri);
+        }
+        else {
+            alert("No audio to save!");
+            return;
+        }
+    }
 
-export default Microphone;
+    const playAudio = async () => {
+        const { sound } = await Audio.Sound.createAsync({ uri: AudioPath });
+        await sound.playAsync();
+    }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    button: {
-        height: 50,
-        width: 150,
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 20,
-    },
-    text: {
-        fontSize: 20,
-    },
-});
+    return(
+        <SafeAreaView style={styles.container}>
+            <Button icon="microphone" mode="contained" onPress={startRecording}>Start Recording</Button>
+            <Button icon="stop" mode="contained" onPress={stopRecording}>Stop Recording</Button>
+            <Button icon="play" mode="contained" onPress={playAudio}>Play Audio</Button>
+        </SafeAreaView>
+    )
+}

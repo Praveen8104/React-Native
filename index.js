@@ -10,7 +10,7 @@ import imagepicker from './Components/imagepicker';
 import imageSharing from './Components/imagesharing';
 import cameraaccess from './Components/cameraaccess';
 import Fingerprint from './Components/Fingerprint';
-import Microphone from './Components/microphone';
+import microphone from './Components/microphone';
 // import Notification from './Components/Notifications';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
@@ -24,7 +24,7 @@ import Microphone from './Components/microphone';
 // registerRootComponent(bouningball);
 // registerRootComponent(imagepicker);
 // registerRootComponent(imageSharing);
-registerRootComponent(cameraaccess);
+// registerRootComponent(cameraaccess);
 // registerRootComponent(Fingerprint);
-// registerRootComponent(Microphone);
+registerRootComponent(microphone);
 // registerRootComponent(Notification);
